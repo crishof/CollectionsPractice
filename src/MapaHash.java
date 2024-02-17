@@ -3,6 +3,7 @@ import service.CollectionService;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class MapaHash {
     public static void main(String[] args) {
@@ -61,6 +62,9 @@ public class MapaHash {
 
         // Elimina un elemento del mapa
         mapaHash.remove("Carla");
+
+        // Obtener las claves
+        Set<String> keys = mapaHash.keySet();
 
         mensaje = "HashMap de personas: ";
         service.printMap(mensaje, mapaHash);
