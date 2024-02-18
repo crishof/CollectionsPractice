@@ -7,35 +7,18 @@ public class ListaStack {
     public static void main(String[] args) {
 
 
-        String mensaje = "";
+        String mensaje;
         CollectionService service = new CollectionService();
-
-        Persona p1 = new Persona("Carlos", 23, "Futbol");
-        Persona p2 = new Persona("Maria", 25, "Basket");
-        Persona p3 = new Persona("Juan", 20, "Tenis");
-        Persona p4 = new Persona("Pedro", 30, "Voley");
-        Persona p5 = new Persona("Luis", 28, "Futbol");
-        Persona p6 = new Persona("Ana", 22, "Basket");
-        Persona p7 = new Persona("Marta", 27, "Tenis");
-        Persona p8 = new Persona("Jorge", 21, "Voley");
-        Persona p9 = new Persona("Laura", 24, "Futbol");
-        Persona p10 = new Persona("Carla", 26, "Basket");
 
         // LISTA STACK (FILO)
 
         Stack<Persona> listaStack = new Stack<>();
+        service.crearPersonas(listaStack);
+
+        Persona p11 = new Persona("Antonio", 35, "Tenis");
 
         // Add an item
-        listaStack.push(p1);
-        listaStack.push(p2);
-        listaStack.push(p3);
-        listaStack.push(p4);
-        listaStack.push(p5);
-        listaStack.push(p6);
-        listaStack.push(p7);
-        listaStack.push(p8);
-        listaStack.push(p9);
-        listaStack.push(p10);
+        listaStack.push(p11);
 
         mensaje = "Stack de personas: ";
         service.print(mensaje, listaStack);
@@ -48,7 +31,7 @@ public class ListaStack {
 
         // Buscamos un elemento
         // busca el elemento en la pila, si lo encuentra devuelve su posicion, si no devuelve -1.
-        System.out.println(listaStack.search(p1));
+        System.out.println(listaStack.search(p11));
 
         // Boolean is Empty
         System.out.println("Esta vacía = " + listaStack.isEmpty());

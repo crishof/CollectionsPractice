@@ -1,20 +1,20 @@
 package model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Comparator;
 
 @Data
+@NoArgsConstructor
 public class Persona implements Comparable<Persona> {
 
     // Comparator sin implementación Comparable
     public static final Comparator<Persona> COMPARADOR_POR_DEPORTE = Comparator.comparing(Persona::getDeporteFavorito);
+
     private String name;
     private int age;
     private String deporteFavorito;
-
-    public Persona() {
-    }
 
     public Persona(String name, int age, String deporteFavorito) {
         this.name = name;
@@ -24,7 +24,7 @@ public class Persona implements Comparable<Persona> {
 
     @Override
     public String toString() {
-        return "{ " + "name='" + name + '\'' + ", age=" + age + ", deporteFavorito='" + deporteFavorito + '\'' + '}';
+        return "{ " + "name: " + name + ", age: " + age + ", deporteFavorito: " + deporteFavorito + '}';
     }
 
     // Implementacion de comparable

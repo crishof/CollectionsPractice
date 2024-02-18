@@ -7,17 +7,32 @@ import java.util.Map;
 
 public class CollectionService {
 
-    public void addPersons(Persona p1, Persona p2, Persona p3, Persona p4, Persona p5, Persona p6, Persona p7, Persona p8, Persona p9, Persona p10, List<Persona> lista) {
-        lista.add(p1);
-        lista.add(p2);
-        lista.add(p3);
-        lista.add(p4);
-        lista.add(p5);
-        lista.add(p6);
-        lista.add(p7);
-        lista.add(p8);
-        lista.add(p9);
-        lista.add(p10);
+    public void crearPersonasMapa(Map<String, Persona> mapa) {
+
+        mapa.put("Carlos", new Persona("Carlos", 23, "Futbol"));
+        mapa.put("Maria", new Persona("Maria", 25, "Basket"));
+        mapa.put("Juan", new Persona("Juan", 20, "Tenis"));
+        mapa.put("Pedro", new Persona("Pedro", 30, "Voley"));
+        mapa.put("Luis", new Persona("Luis", 28, "Futbol"));
+        mapa.put("Ana", new Persona("Ana", 22, "Basket"));
+        mapa.put("Marta", new Persona("Marta", 27, "Tenis"));
+        mapa.put("Jorge", new Persona("Jorge", 21, "Voley"));
+        mapa.put("Laura", new Persona("Laura", 24, "Futbol"));
+        mapa.put("Carla", new Persona("Carla", 26, "Basket"));
+    }
+
+    public void crearPersonas(List<Persona> lista) {
+
+        lista.add(new Persona("Carlos", 23, "Futbol"));
+        lista.add(new Persona("Maria", 25, "Basket"));
+        lista.add(new Persona("Juan", 20, "Tenis"));
+        lista.add(new Persona("Pedro", 30, "Voley"));
+        lista.add(new Persona("Luis", 28, "Futbol"));
+        lista.add(new Persona("Ana", 22, "Basket"));
+        lista.add(new Persona("Marta", 27, "Tenis"));
+        lista.add(new Persona("Jorge", 21, "Voley"));
+        lista.add(new Persona("Laura", 24, "Futbol"));
+        lista.add(new Persona("Carla", 26, "Basket"));
     }
 
     public void print(String mensaje, List<Persona> lista) {
@@ -52,7 +67,5 @@ public class CollectionService {
         for (Map.Entry<String, Persona> entry : mapa.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
-
-
     }
 }
